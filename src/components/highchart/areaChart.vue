@@ -1,16 +1,15 @@
 <template>
   <div class="line-chart-wrap">
-    Line Chart
-    <!-- <highchart :visualProperties="visualProperties" :series="data" :widgetId="widgetId"></highchart> -->
+    <highchart :visualProperties="visualProperties" :series="data" :widgetId="widgetId"></highchart>
   </div>
 </template>
 
 <script>
-// import Highchart from "./highcart.vue"
+import Highchart from "./highchart.vue"
 
 export default {
   components: {
-    // Highchart,
+    Highchart,
   },
   props: {
     visualProperties: {
@@ -23,9 +22,12 @@ export default {
   },
   data() {
     return {
-      widgetId: 'lineChartId'
+      widgetId: 'areaChartId'
     }
   },
+  mounted () {
+    console.log('area chart')
+  }
 }
 </script>
 

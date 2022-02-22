@@ -1,10 +1,10 @@
-import Highchart from "./index.vue"
+import Chart from "./index.vue"
 
 import { use, registerComponent } from "../../utils/plugins"
 
 const Plugin = {
   install(Vue) {
-    registerComponent(Vue, Highchart)
+    registerComponent(Vue, Chart)
   },
 }
 
@@ -13,5 +13,5 @@ use(Plugin)
 export default Plugin
 
 export {
-  Highchart as MadsHighchart
+  Chart as MadsHighchart
 }

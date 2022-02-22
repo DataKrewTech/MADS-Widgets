@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import Highchart from "./highcart.vue"
+import Highchart from "./highchart.vue"
 
 export default {
   components: {
-    Highchart,
+    Highchart
   },
   props: {
     visualProperties: {
@@ -18,13 +18,20 @@ export default {
     },
     data: {
       required: true
+    },
+    type: {
+      type: String,
+      default: 'chart'
     }
   },
   data() {
     return {
-      widgetId: 'areaChartId'
+      widgetId: 'lineChartId'
     }
   },
+  mounted () {
+    console.log('line chart')
+  }
 }
 </script>
 

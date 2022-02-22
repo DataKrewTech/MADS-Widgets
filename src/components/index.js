@@ -1,5 +1,7 @@
-import Highchart from './higchart/index'
+import Chart from './highchart/index.js'
+import Button from './button'
 
 export {
-  Highchart
+  Button,
+  Chart
 }

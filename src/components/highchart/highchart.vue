@@ -41,9 +41,9 @@ export default {
       type: String,
       required: true
     },
-    category: {
+    type: {
       type: String,
-      default: 'highchart'
+      default: 'chart'
     },
     width: {
       type: Number
@@ -121,7 +121,7 @@ export default {
         series: series
       })
 
-      if (this.category === 'stock_chart') {
+      if (this.type === 'stock_chart') {
         this.widget = Highcharts.stockChart('highChart' + this.widgetId, widgetOptions)
       } else {
         this.widget = Highcharts.chart('highChart' + this.widgetId, widgetOptions)
