@@ -1,9 +1,6 @@
 <!-- Demo.vue -->
 <template>
-  <div>
-    Demo component
-    <!-- <component :is="componentName"/> -->
-  </div>
+  <component :is="componentName"/>
 </template>
 
 <script>
