@@ -61,6 +61,21 @@ module.exports = {
                 path: '/charts/area'
               }
             ]
+          },
+          {
+            title: 'Cards',
+            path: '/cards/',
+            collapsable: false,
+            children: [
+              {
+                title: 'Data Card',
+                path: '/cards/dataCard'
+              },
+              {
+                title: 'Data Percent Card',
+                path: '/cards/dataPercentCard'
+              }
+            ]
           }
         ]
       }

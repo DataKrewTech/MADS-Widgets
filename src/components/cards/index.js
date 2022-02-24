@@ -1,10 +1,10 @@
-import Button from './button'
+import Card from './index.vue'
 
 import { use, registerComponent } from '../../utils/plugins'
 
 const Plugin = {
     install(Vue) {
-        registerComponent(Vue, Button)
+        registerComponent(Vue, Card)
     }
 }
 
@@ -13,5 +13,5 @@ use(Plugin)
 export default Plugin
 
 export {
-    Button as MadsButton
+    Card as MadsCard
 }
