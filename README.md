@@ -1,24 +1,23 @@
-# mads-widgets
+# Installation
 
-## Project setup
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
+npm install mads-widgets
 ```
 
-### Compiles and minifies for production
+# Full Bundle
+
 ```
-yarn build
+import Vue from 'vue'
+import MadsWidgets from 'mads-widgets'
+
+Vue.use(MadsWidgets)
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
+# Individual components as Vue plugins
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+import Vue from 'vue'
+import { MadsHighchart } from 'mads-widgets'
+
+Vue.use(MadsHighchart)
+```
