@@ -95,7 +95,6 @@ export default {
         font-size: 24px;
       }
       .data-title {
-        // color: #98a6ad;
         text-align: right;
       }
     }

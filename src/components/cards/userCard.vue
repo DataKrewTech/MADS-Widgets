@@ -77,9 +77,6 @@ export default {
       .name {
         font-weight: bold;
       }
-      .role {
-        // color: #98a6ad;
-      }
     }
   }
 </style>
