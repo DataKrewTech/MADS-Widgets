@@ -42,7 +42,10 @@ export default {
       required: true
     },
     series: {
-      required: true
+      type: Array,
+      default: () => {
+        return []
+      }
     },
     type: {
       type: String,

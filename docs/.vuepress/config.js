@@ -74,6 +74,14 @@ module.exports = {
               {
                 title: 'Data Percent Card',
                 path: '/cards/dataPercentCard'
+              },
+              {
+                title: 'User Card',
+                path: '/cards/userCard'
+              },
+              {
+                title: 'Image Card',
+                path: '/cards/imageCard'
               }
             ]
           }

@@ -1,5 +1,5 @@
 <template>
-  <div class="user-card">
+  <div class="user-card" :style="{ background: getCardBackgroundColor() }">
     <div class="image-wrap">
       <img :src="getImage().url" alt="">
     </div>
@@ -20,23 +20,26 @@ export default {
     return {}
   },
   props: {
-    widget: {
+    visualProperties: {
       type: Object,
       required: true
     }
   },
   methods: {
     getImage () {
-      return this.widget.visual_properties.image || {}
+      return this.visualProperties.image || {}
     },
     getTitle () {
-      return this.widget.visual_properties.title || {}
+      return this.visualProperties.title || {}
     },
     getSubTitle () {
-      return this.widget.visual_properties.subtitle || {}
+      return this.visualProperties.subtitle || {}
     },
     getCard () {
-      return this.widget.visual_properties.card || {}
+      return this.visualProperties.card || {}
+    },
+    getCardBackgroundColor () {
+      return this.getCard().backgroundColor
     },
     getFontColor () {
       if ((this.getCard().backgroundColor) === '#ffffff') {

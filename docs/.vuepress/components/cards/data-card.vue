@@ -66,7 +66,7 @@ export default {
 
 <style lang="scss" scoped>
   .data-card-demo-wrap {
-    width: 100%;
+    width: 500px;
     height: 300px;
   }
 </style>

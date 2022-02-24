@@ -1,5 +1,5 @@
 <template>
-  <div class="image-card-wrap" :style="{backgroundColor: getCard().backgroundColor}">
+  <div class="image-card-wrap" :style="{ background: getCardBackgroundColor() }">
     <!-- <div class="image-subtitle" :style="{fontSize: getSubtitle().fontSize + 'px', color: getSubtitle().fontColor}">{{getSubtitle().text}}</div> -->
     <div class="image-wrap">
       <img :src="getImageUrl()" alt="">
@@ -17,26 +17,29 @@ export default {
     return {}
   },
   props: {
-    widget: {
+    visualProperties: {
       type: Object,
       required: true
     }
   },
   methods: {
     getCard () {
-      return this.widget.visual_properties.card || {}
+      return this.visualProperties.card || {}
     },
     getTitle () {
-      return this.widget.visual_properties.title || {}
+      return this.visualProperties.title || {}
     },
     getSubtitle () {
-      return this.widget.visual_properties.subtitle || {}
+      return this.visualProperties.subtitle || {}
     },
     getDescription () {
-      return this.widget.visual_properties.description || {}
+      return this.visualProperties.description || {}
+    },
+    getCardBackgroundColor () {
+      return this.getCard().backgroundColor
     },
     getImageUrl () {
-      let imageUrl = (this.widget.visual_properties.image && this.widget.visual_properties.image.url) || (this.widget.visual_properties.icon && this.widget.visual_properties.icon.text)
+      let imageUrl = (this.visualProperties.image && this.visualProperties.image.url) || (this.visualProperties.icon && this.visualProperties.icon.text)
       return imageUrl || '/assets/img/no-image.png'
     }
   }
